@@ -7,8 +7,6 @@ RUN apt-get update \
     && docker-php-ext-install zip mbstring intl \
     && apt-get -y install php5-gd
 
-ADD php.ini /usr/local/etc/php/php.ini
-
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/bin/composer
 
